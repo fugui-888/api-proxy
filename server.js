@@ -71,6 +71,6 @@ app.use('/api/getMinutesKLineData/:symbol', createProxyMiddleware({
 
 
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, '0.0.0.0', () => {
     console.log('Proxy server is running on http://localhost:4000');
 });
